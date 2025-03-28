@@ -4,144 +4,164 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  transition: background-color 0.3s ease;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: background 0.3s ease;
 }
 
 .calculator-container.light {
-  background-color: rgb(245, 229, 247);
+  background: linear-gradient(135deg, #f5b18c 0%, #eb8de6 100%);
 }
 
 .calculator-container.dark {
-  background-color: rgb(31, 39, 50);
+  background: linear-gradient(135deg, #2c3e50 0%, #b134db 100%);
 }
 
 .calculator {
   width: 400px;
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 7px 10px 10px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
 }
 
 .dark .calculator {
-  background: #2d2d2d;
+  background: rgba(45, 45, 45, 0.9);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .calculator-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .calculator-header h2 {
   margin: 0;
-  font-size: 1.25rem;
-  color: #333;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  letter-spacing: 1px;
 }
 
 .dark .calculator-header h2 {
-  color: #fff;
+  color: #ffffff;
 }
 
 .theme-toggle {
-  padding: 8px 12px;
+  padding: 10px 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-  background: #f1f5f9;
-  transition: background-color 0.3s ease;
+  background: rgba(241, 245, 249, 0.7);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .dark .theme-toggle {
-  background: #404040;
+  background: rgba(64, 64, 64, 0.7);
+  color: #ffffff;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
 }
 
 .display {
-  background: #f8fafc;
+  background: rgba(248, 250, 252, 0.8);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 15px;
   margin-bottom: 20px;
-  transition: background-color 0.3s ease;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
 }
 
 .dark .display {
-  background: #404040;
+  background: rgba(64, 64, 64, 0.8);
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .display-text {
   text-align: right;
-  font-size: 1.5rem;
-  font-family: monospace;
+  font-size: 1.7rem;
+  font-family: 'Roboto Mono', monospace;
   color: #333;
   overflow-x: auto;
   white-space: nowrap;
+  letter-spacing: 1px;
 }
 
 .dark .display-text {
-  color: #fff;
+  color: #ffffff;
 }
 
 .buttons {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
+  gap: 10px;
 }
 
 .button {
-  padding: 12px 8px;
+  padding: 14px 10px;
   border: none;
-  border-radius: 5px;
-  background: #f1f5f9;
+  border-radius: 10px;
+  background: rgba(241, 245, 249, 0.8);
   color: #333;
   font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .dark .button {
-  background: #404040;
-  color: #fff;
+  background: rgba(64, 64, 64, 0.8);
+  color: #ffffff;
 }
 
 .button:hover {
-  background: #e2e8f0;
+  transform: scale(1.05);
+  background: rgba(226, 232, 240, 0.9);
 }
 
 .dark .button:hover {
-  background: #525252;
+  background: rgba(82, 82, 82, 0.9);
 }
 
 .button.special {
-  font-weight: bold;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .button.active {
-  background: #3b82f6;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
   color: white;
+  box-shadow: 0 6px 10px rgba(59, 130, 246, 0.3);
 }
 
 .dark .button.active {
-  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
 }
 
 .button.equals {
   grid-column: span 2;
-  background: #3b82f6;
+  background: linear-gradient(135deg, #10b981, #34d399);
   color: white;
+  box-shadow: 0 6px 10px rgba(16, 185, 129, 0.3);
 }
 
 .button.equals:hover {
-  background: #2563eb;
+  background: linear-gradient(135deg, #34d399, #10b981);
 }
 
 .dark .button.equals {
-  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
 }
 
 .dark .button.equals:hover {
-  background: #1d4ed8;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
 }
 
 @media (max-width: 480px) {
@@ -151,7 +171,7 @@
   }
   
   .button {
-    padding: 10px 6px;
-    font-size: 0.9rem;
+    padding: 12px 8px;
+    font-size: 0.95rem;
   }
 }
